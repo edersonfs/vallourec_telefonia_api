@@ -1,0 +1,132 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" *ngIf="showMenu()">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLinkActive="router-link-active"
+      >Vallourec Telefonia</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="navClick(this.isCollapsed)"
+      aria-controls="collapseEvent"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNav"
+      [isAnimated]="true"
+      [collapse]="this.getCollapsed()"
+    >
+      <ul class="menu">
+        <li>
+          <a class="nav-link" routerLinkActive="router-link-active">Ativo</a>
+          <ul>
+            <li style="border-top: solid 1px #c0c0c0">
+              <a
+                class="nav-link"
+                routerLink="/tipo"
+                routerLinkActive="router-link-active"
+                >Tipo</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                routerLink="/tipo"
+                routerLinkActive="router-link-active"
+                >Categorizacao</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                routerLink="/tipo"
+                routerLinkActive="router-link-active"
+                >Status do Ativo</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="router-link-active">Linha</a>
+          <ul>
+            <li
+              style="border-top: solid 1px #c0c0c0"
+              routerLinkActive="router-link-active"
+            >
+              <a class="nav-link" routerLink="/responsaveis">Responsavel</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="router-link-active">Aparelho</a>
+          <ul>
+            <li style="border-top: solid 1px #c0c0c0">
+              <a
+                class="nav-link"
+                routerLink="/marcas"
+                routerLinkActive="router-link-active"
+                >Marca</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="router-link-active">Usuário</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="router-link-active">Operador</a>
+          <ul>
+            <li
+              style="border-top: solid 1px #c0c0c0"
+              routerLinkActive="router-link-active"
+            >
+              <a class="nav-link" routerLink="/responsaveis/lista"
+                >Responsavel</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="router-link-active"
+            >Inventário</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="router-link-active">SLA</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-4">
+        <li class="nav-item dropdown" dropdown>
+          <a
+            dropdownToggle
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            style="cursor: pointer"
+          >
+            Vinícius (admin)
+          </a>
+          <div
+            *dropdownMenu
+            class="dropdown-menu"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <a class="dropdown-item" [routerLink]="['/user/perfil']">
+              Perfil
+            </a>
+            <div role="separator" class="divider"></div>
+            <a class="dropdown-item" [routerLink]="['/user/login']"> Sair </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

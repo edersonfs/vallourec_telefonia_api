@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back", "Back", "{28B2A250-763D-4554-9968-8A47B06B2935}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1C627376-9109-41C2-AEC3-E14AFE34970B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VallourecTelefonia.API", "Back\src\VallourecTelefonia.API\VallourecTelefonia.API.csproj", "{CF100D16-9F1D-4DE5-B61B-AEDACBA1400A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VallourecTelefonia.Application", "Back\src\VallourecTelefonia.Application\VallourecTelefonia.Application.csproj", "{E408A456-0789-4475-805A-EE4293ADF952}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VallourecTelefonia.Domain", "Back\src\VallourecTelefonia.Domain\VallourecTelefonia.Domain.csproj", "{A3A5C81E-1508-4495-A5E5-A35D072D0AAC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VallourecTelefonia.Repository", "Back\src\VallourecTelefonia.Persistence\VallourecTelefonia.Repository.csproj", "{5CA3259E-A0AC-4561-B42C-5E4E6CB066FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF100D16-9F1D-4DE5-B61B-AEDACBA1400A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF100D16-9F1D-4DE5-B61B-AEDACBA1400A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF100D16-9F1D-4DE5-B61B-AEDACBA1400A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF100D16-9F1D-4DE5-B61B-AEDACBA1400A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E408A456-0789-4475-805A-EE4293ADF952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E408A456-0789-4475-805A-EE4293ADF952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E408A456-0789-4475-805A-EE4293ADF952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E408A456-0789-4475-805A-EE4293ADF952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3A5C81E-1508-4495-A5E5-A35D072D0AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A5C81E-1508-4495-A5E5-A35D072D0AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A5C81E-1508-4495-A5E5-A35D072D0AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A5C81E-1508-4495-A5E5-A35D072D0AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CA3259E-A0AC-4561-B42C-5E4E6CB066FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA3259E-A0AC-4561-B42C-5E4E6CB066FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA3259E-A0AC-4561-B42C-5E4E6CB066FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA3259E-A0AC-4561-B42C-5E4E6CB066FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C627376-9109-41C2-AEC3-E14AFE34970B} = {28B2A250-763D-4554-9968-8A47B06B2935}
+		{CF100D16-9F1D-4DE5-B61B-AEDACBA1400A} = {1C627376-9109-41C2-AEC3-E14AFE34970B}
+		{E408A456-0789-4475-805A-EE4293ADF952} = {1C627376-9109-41C2-AEC3-E14AFE34970B}
+		{A3A5C81E-1508-4495-A5E5-A35D072D0AAC} = {1C627376-9109-41C2-AEC3-E14AFE34970B}
+		{5CA3259E-A0AC-4561-B42C-5E4E6CB066FE} = {1C627376-9109-41C2-AEC3-E14AFE34970B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD04B267-7386-4AAB-981B-4B6C2750DD42}
+	EndGlobalSection
+EndGlobal
