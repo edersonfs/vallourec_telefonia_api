@@ -12,63 +12,131 @@
   </div>
 
   <div class="col-md-6">
-    <form class="p-1">
+    <form [formGroup]="form">
       <div class="pb-2 d-block d-md-none">
         <h3 class="border-bottom">Cadastro de Usuário</h3>
       </div>
       <div class="d-flex form-row">
         <div class="form-group col-sm-6">
-          <label>Primeiro Nome</label>
+          <label>Nome</label>
           <input
             type="text"
+            formControlName="nome"
+            [ngClass]="{
+              'is-invalid':
+                form.get('nome')?.errors && form.get('nome')?.touched
+            }"
             class="form-control"
-            placeholder="Insira o Primeiro nome"
+            placeholder="Insira o Nome"
           />
-        </div>
-        <div class="form-group col-sm-6">
-          <label>Último nome</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Insira o Último nome"
-          />
+          <div
+            *ngIf="form.get('nome')?.hasError('required')"
+            class="invalid-feedback"
+          >
+            nome é obrigatorio
+          </div>
+          <div
+            *ngIf="form.get('nome')?.hasError('minlength')"
+            class="invalid-feedback"
+          >
+            nome deve conter no mínimo 4 caracteres
+          </div>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group pt-3">
         <label for="">Email:</label>
         <input
           class="form-control"
+          formControlName="email"
+          [ngClass]="{
+            'is-invalid':
+              form.get('email')?.errors && form.get('email')?.touched
+          }"
           type="text"
           placeholder="Insira o Nome Completo"
         />
+        <div
+          *ngIf="form.get('email')?.hasError('required')"
+          class="invalid-feedback"
+        >
+          email é obrigatorio
+        </div>
+        <div
+          *ngIf="form.get('email')?.hasError('email')"
+          class="invalid-feedback"
+        >
+          favor informar um email válido
+        </div>
       </div>
-      <div class="form-group">
-        <label for="">Usuario:</label>
-        <input
-          class="form-control"
-          type="text"
-          placeholder="Insira o nome de Usuário"
-        />
-      </div>
-      <div class="d-flex form-row">
+      <div class="d-flex form-row pt-3">
         <div class="form-group col-sm-6">
           <label for="">Senha:</label>
           <input
-            class="form-control"
             type="password"
+            formControlName="senha"
+            [ngClass]="{
+              'is-invalid':
+                form.get('senha')?.errors && form.get('senha')?.touched
+            }"
+            class="form-control"
             placeholder="Digite uma Senha"
           />
+          <div
+            *ngIf="
+              form.get('senha')?.hasError('required') &&
+              form.get('senha')?.touched
+            "
+            class="invalid-feedback"
+          >
+            senha é obrigatorio
+          </div>
+          <div
+            *ngIf="form.get('senha')?.hasError('minlength')"
+            class="invalid-feedback"
+          >
+            senha deve conter no mínimo 6 caracteres
+          </div>
         </div>
-        <div class="form-group col-sm-6">
+        <div class="form-group col-sm-6 ps-3">
           <label for="">Confirmar Senha:</label>
           <input
-            class="form-control"
             type="password"
+            formControlName="confirmarSenha"
+            [ngClass]="{
+              'is-invalid':
+                form.get('confirmarSenha')?.errors &&
+                form.get('confirmarSenha')?.touched
+            }"
+            class="form-control"
             placeholder="Confirme a Senha"
           />
+          <div
+            *ngIf="
+              form.get('confirmarSenha')?.hasError('required') &&
+              form.get('confirmarSenha')?.touched
+            "
+            class="invalid-feedback"
+          >
+            confirmação de senha é obrigatorio
+          </div>
+          <div
+            *ngIf="
+              form.get('confirmarSenha')?.hasError('mustMatch') &&
+              form.get('confirmarSenha')?.touched
+            "
+            class="invalid-feedback"
+          >
+            a senha deve ser a mesma
+          </div>
         </div>
       </div>
-      <div class="form-row p-1 mb-3">
+      <div class="d-flex form-row pt-3">
+        <div class="form-group col-sm-6">
+          <label for="">Ativo:</label>
+          <input class="form-check-input" type="checkbox" placeholder="" />
+        </div>
+      </div>
+      <div class="form-row p-1 mb-3 pt-3">
         <div class="custom-control custom-checkbox">
           <input
             type="checkbox"
